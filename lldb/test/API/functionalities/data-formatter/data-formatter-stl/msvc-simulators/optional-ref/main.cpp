@@ -1,4 +1,4 @@
-// Layout approximation of polyfill / Beman Optional26 std::optional<T&>.
+// Layout approximation of std::optional<T&> as a T* (null = empty).
 
 namespace std {
 template <class T> class optional;

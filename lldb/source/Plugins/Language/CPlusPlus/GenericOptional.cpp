@@ -57,8 +57,8 @@ private:
   StdLib m_stdlib;
 };
 
-/// `std::optional<T&>` (C++26 and polyfills such as Beman Optional26) stores
-/// a `T*` instead of an engaged flag plus payload. Null means empty.
+/// `std::optional<T&>` stores a `T*` instead of an engaged flag plus payload.
+/// Null means empty. Known pointer members: `value_`, `_M_val`, `__value_`.
 static ValueObjectSP GetOptionalRefPointer(ValueObject &backend) {
   static constexpr llvm::StringLiteral kNames[] = {"value_", "_M_val",
                                                    "__value_"};
